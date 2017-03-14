@@ -1,0 +1,113 @@
+---
+layout: home
+---
+
+<main class="bd-masthead" id="content">
+  <div class="container">
+    <span class="bd-booticon outline">B</span>
+    <p class="lead">Bootstrap je nejpopulárnější HTML, CSS, a JS framework pro tvorbu responzivních, mobile-first webových projektů na světě.</p>
+    <p class="lead">
+      <a href="{{ site.baseurl }}/getting-started/download/" class="btn btn-lg" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ site.current_version }}');">Stáhnout Bootstrap</a>
+    </p>
+    <p class="version">Aktuální verze v{{ site.current_version }}</p>
+  </div>
+</main>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">Začít je jednoduché</h2>
+    <p class="lead">Přímo vložte Bootstrap CSS a JS do jakéhokoliv projektu. Použijte svůj oblíbený správce balíčků, stáhněte si zdrojový kód, nebo použijte Bootstrap CDN.</p>
+
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <h4>Řešení závislostí</h4>
+        <p>Připravte Sass a JavaScript soubory přes Bower, Composer, Meteor, nebo npm. Instalace prostřednictvím správce balíčků neobsahují dokumentaci, ale obsahují náš Gruntfile a readme</p>
+        <p>
+          <a class="btn btn-bs" href="{{ site.baseurl }}/getting-started/download/#package-managers">Instalační metody</a>
+        </p>
+      </div>
+      <div class="col-sm-6 mb-3">
+        <h4>Bootstrap CDN</h4>
+        <p>Pokud potřebujete pouze vložit předkompilované Bootstrap CSS a JS soubory, použijte Bootstrap CDN, který je k dispozici k volému použití prostřednictvím Max CDN folks.</p>
+{% highlight html %}
+<link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.tether }}" integrity="{{ site.cdn.tether_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
+{% endhighlight %}
+      </div>
+    </div>
+
+    <hr class="half-rule mt-0">
+
+    <p><strong>Hledáte něco jiného</strong> K dispozici jsou také další již zkompilované Bootstrap CSS a JS soubory</p>
+    <a href="{{ site.baseurl }}/getting-started/download/" class="btn btn-bs">Další soubory ke stažení</a>
+  </div>
+</div>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">Vytvořeno pro každého, kdekoliv.</h2>
+    <p class="lead">Bootstrap dělá webový vývoj rychlejší a snadnější. Byl vytvořen pro lidi všech schopností, všech možných zařízení, a pro projekty všech velikostí.</p>
+
+    <div class="row">
+      <div class="col-sm-4 mb-3">
+        <img src="{{ site.baseurl }}/assets/img/sass.png" alt="Sass support" class="img-fluid">
+        <h4>Preprocessor</h4>
+        <p>Bootstrap je dodávaný s vanilla CSS, ale jeho zdrojový kód využívá <a href="http://sass-lang.com/">Sass</a>, populární CSS preprocesor. Začnete okamžitě s předpřipraveným CSS nebo svůj projekt postavte na dalších zdrojích.</p>
+      </div>
+      <div class="col-sm-4 mb-3">
+        <img src="{{ site.baseurl }}/assets/img/devices.png" alt="Responsive across devices" class="img-fluid">
+        <h4>Jeden framework, všechna zařízení.</h4>
+        <p>Bootstrap jednoduše a efektivně škáluje váš web pomocí jedné jediné kódové základny, od telefonů přes tablety až po desktopy.</p>
+      </div>
+      <div class="col-sm-4 mb-3">
+        <img src="{{ site.baseurl }}/assets/img/components.png" alt="Components" class="img-fluid">
+        <h4>Našlapaný funkcemi</h4>
+        <p>S Bootstrapem, získáváte obrovské množství běžných HTML elementů, nesčetné zástupy vlastních HTML a CSS komponent, a skvělé jQuery pluginy.</p>
+      </div>
+    </div>
+
+    <hr class="half-rule mt-0">
+
+    <p><strong>Bootstrap je open source!</strong> Je hostován, vyvíjen a spravován na GitHub lidmi jako jste vy.</p>
+    <a href="{{ site.repo }}" class="btn btn-bs">Prohlédnou Bootstrap na GitHub</a>
+  </div>
+</div>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">Oficiální Bootstrap Šablony.</h2>
+    <p class="lead">
+      Pozvedněte Bootstrap na vyší úroveň s oficiálními premium šablonami. Každá šablona je unikátní svými funkcemi, avšak přináší vše skvělé z Boostrapu, unikátní komponenty, pluginy a další.
+    </p>
+
+    <p class="lead">
+      <a href="{{ site.themes }}" class="btn btn-bs">Prohlédnout šablony</a>
+    </p>
+
+    <img class="img-fluid mx-auto" src="{{ site.baseurl }}/assets/img/bs-themes.png" alt="Bootstrap Themes" width="1024" height="388">
+  </div>
+</div>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">Tvořte s Bootstrapem.</h2>
+    <p class="lead">Milióny webů napříč internetem byly vytvořeny díky Boostrapu. Začít můžete i vy s naší <a href="{{ site.baseurl }}/examples/">kolekcí přkladů</a> nebo se pusťte do objevování našich favoritů.</p>
+
+    <div class="row bd-featured-sites">
+    {% for showcase in site.data.showcase %}
+      <div class="col-6 col-sm-3">
+        <a href="{{ showcase.expo_url }}" target="_blank" title="{{ showcase.name }}">
+          <img src="{{ site.baseurl }}/assets/img/expo-{{ showcase.img }}.jpg" alt="{{ showcase.name }}" class="img-fluid">
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+
+    <hr class="half-rule">
+
+    <p>Představujeme spoustu inspirujících projektu postavených na Boostrapu prostřednictvím Bootstrap Expo.</p>
+    <a href="{{ site.expo }}" class="btn btn-bs">Objevte Boostrap Expo</a>
+  </div>
+</div>
